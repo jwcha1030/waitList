@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="waiting.WaitListController">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <rowConstraints>
+        <RowConstraints percentHeight="8.0" vgrow="NEVER" />
+        <RowConstraints percentHeight="2.0" vgrow="NEVER" />
+        <RowConstraints percentHeight="45" vgrow="ALWAYS" />
+        <RowConstraints percentHeight="45" vgrow="ALWAYS" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" prefWidth="200.0" />
+        <ColumnConstraints hgrow="NEVER" prefWidth="5.0" />
+        <ColumnConstraints hgrow="ALWAYS" />
+      <ColumnConstraints />
+    </columnConstraints>
+    <children>
+        <ListView fx:id="waitingList" GridPane.rowSpan="4" />
+        <GridPane GridPane.columnIndex="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            <children>
+                <Text text="이름: " textAlignment="JUSTIFY" GridPane.columnIndex="0" />
+                <TextField fx:id="nameTextField" prefHeight="30" GridPane.columnIndex="1">
+                    <promptText>
+                        이름을 입력하세요.
+                    </promptText>
+                </TextField>
+            </children>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+        <Button fx:id="addButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="대기하기" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Button fx:id="removeButton" text="입장하기" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+    </children>
+</GridPane>
